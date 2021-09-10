@@ -1,0 +1,348 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-merri;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+.toggle {
+  display: none;
+}
+.dol__one,
+.dol__two,
+.dol__three,
+.dol__four {
+  width: 300px;
+}
+
+.btn {
+  background: none;
+  border: none;
+  font-family: $font-merri;
+}
+
+.nav__item.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: rgba(43, 243, 200, 0.63);
+  bottom: -10px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #fff;
+  padding: 2rem;
+
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+
+  .navbar__nav {
+    .nav__item {
+      margin: 0 1rem;
+      position: relative;
+
+      .nav__link {
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .signup__btn {
+    box-shadow: 2px 6px 14px #00000036;
+    padding: 0.5rem 2rem;
+    font-weight: 700;
+    font-size: 0.6rem;
+  }
+}
+
+main {
+  overflow: hidden;
+  .introduction {
+    padding: 2rem 8rem;
+    position: relative;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+    }
+
+    .intro__p {
+      font-size: 0.6rem;
+      font-weight: 600;
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    .intro__image {
+      width: 100%;
+      max-width: 35rem;
+      z-index: 5;
+    }
+
+    .intro__down {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6rem 0;
+      width: 100%;
+      max-width: 1000px;
+      margin: auto;
+      position: relative;
+
+      .svg {
+        position: absolute;
+        opacity: 0.05;
+        top: 20%;
+        left: 20%;
+        width: 300px;
+      }
+
+      .intro__down__hl__text {
+        font-size: 2rem;
+        font-weight: 300;
+        text-align: left;
+        padding: 0 1rem;
+        margin-bottom: 3rem;
+        width: 100%;
+        max-width: 300px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 3rem;
+          height: 2px;
+          background: rgba(43, 243, 200, 0.63);
+          bottom: -1.8rem;
+          left: 1.5rem;
+        }
+      }
+
+      .intro__down__p__text {
+        width: 60%;
+        max-width: 500px;
+        font-weight: 700;
+        // padding: 0 4rem;
+
+        .upper {
+          font-size: 0.9rem;
+          text-align: left;
+          line-height: 1.8;
+        }
+
+        .lower {
+          text-align: left;
+          font-size: 0.7rem;
+          line-height: 2;
+        }
+      }
+    }
+    .dollar {
+      position: absolute;
+      opacity: 0.7;
+      z-index: 4;
+    }
+    .dol__one {
+      top: 10%;
+      left: 10%;
+      transform: rotate(45deg);
+    }
+    .dol__two {
+      top: 20%;
+      right: 10%;
+      transform: rotate(-30deg);
+      width: 16rem;
+    }
+    .dol__three {
+      bottom: 30%;
+      right: 0;
+      transform: rotate(-30deg);
+      width: 10rem;
+    }
+    .dol__four {
+      bottom: 40%;
+      left: 0;
+      transform: rotate(-30deg);
+      width: 12rem;
+    }
+  }
+
+  .what__we__do {
+    background: $colo-main;
+    padding: 2rem 8rem;
+
+    .txt {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      .hl__text {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+
+      .p__text {
+        font-weight: 700;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 3rem;
+          height: 2px;
+          background: rgba(43, 243, 200, 0.63);
+          top: 50%;
+          right: -40%;
+        }
+      }
+    }
+
+    .box__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      padding: 5rem 0;
+
+      .box {
+        width: 18rem;
+        height: 15rem;
+        background: rgb(248, 248, 248);
+        padding: 2rem;
+        margin: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.123);
+        border-radius: 5px;
+
+        .box__img {
+          .img {
+            width: 3rem;
+          }
+        }
+
+        p {
+          font-size: 0.7rem;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+  .more__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5rem;
+    height: 100vh;
+    background: rgb(214, 252, 236);
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 300;
+    }
+    div {
+      max-width: 300px;
+      text-align: left;
+      line-height: 1.8;
+      font-size: 0.8rem;
+
+      p {
+        margin-top: 2rem;
+      }
+    }
+  }
+  .gs__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8rem 5rem;
+    height: 100vh;
+    background: #ffffffdc;
+    background-image: url(/images/image-from-rawpixel-id-3892572-original.png);
+    background-repeat: no-repeat;
+    background-size: 50rem;
+    background-position: bottom right;
+    background-blend-mode: color-burn;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 300;
+    }
+    div {
+      max-width: 400px;
+      text-align: left;
+      line-height: 1.8;
+      font-size: 0.8rem;
+
+      p {
+        margin-top: 2rem;
+      }
+    }
+    .buttons {
+      display: flex;
+      .btn {
+        margin: 10px;
+        cursor: pointer;
+        transition: all 0.1s ease-in-out;
+        box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.226);
+      }
+      .btn__one {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        background: rgb(233, 252, 232);
+
+        a {
+          font-size: 0.6rem;
+          span {
+            font-size: 1.2rem;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .btn__two {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        background: rgb(163, 211, 161);
+
+        a {
+          font-size: 0.8rem;
+          span {
+            font-size: 1.2rem;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

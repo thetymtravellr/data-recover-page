@@ -1,0 +1,39 @@
+@media screen and (max-width: 850px) {
+  .toggle {
+    display: block;
+  }
+  .navbar__nav {
+    display: none;
+  }
+  .signup__btn {
+    display: none;
+  }
+  main {
+    .introduction {
+      padding: 2rem;
+
+      .intro__down {
+        .intro__down__hl__text {
+          margin: auto auto 3rem;
+        }
+        .intro__down__p__text {
+          margin: auto;
+        }
+      }
+      .dollar {
+        display: none;
+      }
+    }
+
+    .what__we__do {
+      padding: 2rem;
+    }
+
+    .gs__container {
+      .buttons {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
